@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de registro</title>
+    </head>
+    <body>
+        <h1>Formulario de registro</h1>
+        <form action = "#", method = "get">
+            <div>
+                <fieldset>
+                    <legend><h2>Personal</h2></legend>
+                    <label for="name">Nombre:</label>
+                    <input type="text", name="name", id="name", placeholder="Fulano", required>
+                    <br>
+                    <label for="birth">Fecha de nacimiento:</label>
+                    <input type="date", name="birthday", id="birth" required min="2000-01-01" max="2018-12-31">
+                    <br>
+                    <label for="animal">Animal favorito:</label>
+                    <input type="text", name="animal", id="animal">
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend><h2>Cuenta</h2></legend>
+                    <label for="email">Correo electrico:</label>
+                    <input type="email", name="email", id="email", placeholder="name@example.com" required>
+                    <fieldset>
+                        <legend><h3>Seguridad</h3></legend>
+                        <label for="password">Contrasena:</label>
+                        <input type="password", name="password", id="password", required pattern=".{6,18}", title="De 6 a 18 caracteres">
+                        <br>
+                        <label for="verify">Verificar contrasena:</label>
+                        <input type="password", name="password", id="verify", required pattern=".{6,18}", title="De 6 a 18 caracteres">
+                    </fieldset>
+                    
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend><h2>Contacto</h2></legend>
+                    <label for="adress">Direccion:</label>
+                    <input type="text", name="adress", id="adress" required>
+                    <br>
+                    <label for="city">Ciudad:</label>
+                    <input type="text", name="city", id="city" required>
+                    <br>
+                    <label for="contry">Pais:</label>
+                    <input type="text", name="contry", id="contry" required>
+                    <br>
+                    <label for="tel">Telefono:</label>
+                    <input type="text", name="tel", id="tel", placeholder="7012-3456" required pattern="[0-9]{4}-[0-9]{4}">
+                </fieldset>
+            </div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+        </form>
+    </body>
+</html>
